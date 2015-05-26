@@ -1,0 +1,65 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+
+    <script type="text/javascript">
+    function createNew(){
+        var params = {
+            x:"0",
+            y:"400",
+            width:"-1",
+            height:"800",
+            viewId:"111",
+            coverHeight:"480",
+            coverWidth:"360",
+            urls:["res://1_1.jpg","res://1_2.jpg","res://1_3.jpg","res://1_4.jpg"]
+        };
+        var data = JSON.stringify(params);
+        uexCoverFlow.createNew(data);
+    }
+
+    function removeView(){
+        var params = {
+            viewId:"111"
+        };
+        var data = JSON.stringify(params);
+        uexCoverFlow.remove(data);
+    }
+
+
+        window.uexOnload = function(type){
+            if(type == 0){
+            uexCoverFlow.onItemPicClick = onItemPicClick;
+            uexCoverFlow.onScrollToPosition = onScrollToPosition;
+
+            }
+        }
+    function onItemPicClick(info){
+        alert(info);
+    }
+
+    function onScrollToPosition(info){
+        <!--alert(info);-->
+    }
+
+
+    </script>
+</head>
+
+<body>
+<div class="tit">uexCoverFlow</div>
+<div class="conbor">
+    <div class="consj">
+            <input class='btn' type='button' value='createNew' onclick='createNew()'>
+
+            <input class='btn' type='button' value='remove' onclick='removeView()'>
+
+
+    </div>
+</div>
+</body>
+</html>
