@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<uexplugins>
+	<plugin>
+        className="org.zywx.wbpalmstar.plugin.uexcoverflow.EUExCoverFlow" uexName="uexCoverFlow" >
+        <method name="createNew" type="0" params="x|y|width|height|viewId|urls"/>
+        <method name="remove" type="0" params="viewId"/>
+        <method name="onItemPicClick" type="2"/>
+        <method name="onScrollToPosition" type="2"/>
+    </plugin>
+</uexplugins>
